@@ -1,0 +1,19 @@
+@use '../../base/mixins' as m;
+@use '../../base/variables' as v;
+.header{
+    background-image: url(../../src/img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3rem 0 20rem 0;
+    &__busqueda{
+        text-align: center;
+        margin-top: 5rem;
+        @include m.tablet { 
+            margin-top: 30rem;
+        }
+        &-boton{
+            @include m.boton(v.$blanco, v.$primario);
+        }
+    }
+}
